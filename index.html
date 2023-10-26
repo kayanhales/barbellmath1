@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Barbell Calculator</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Resources</a>
+</div>
+
+<div class="content">
+  <h2>Barbell Calculator</h2>
+  <p>Calculates barbell math in lbs</p>
+  <p>
+    <form>
+      <label for="target">Enter target weight in lbs:</label><br>
+        <input type="number" id="target" name="target" placeholder="300"><br>
+      <label for="barbell">Enter barbell weight in lbs:</label><br>
+        <input type="number" id="barbell" name="barbell" placeholder="35"><br>
+      
+       <input type="submit" value="Convert" onclick="return getPlatesMain();"><input type="reset" value="Reset" onclick="document.querySelector('#result').textContent = '';">
+    </form>
+  </p>
+  
+  <p>
+  <div id="result"></div>
+  </p>
+
+  <p>
+    <form>
+      <label for="converttolbs">Enter KG weight to convert to LBS:</label><br>
+        <input type="number" id="converttolbs" name="converttolbs" placeholder="72"><br>
+      
+       <input type="submit" value="Convert" onclick="return convertToLbs();"><input type="reset" value="Reset" onclick="document.querySelector('#result2').textContent = '';">
+    </form>
+  </p>
+  
+  <p>
+  <div id="result2"></div>
+  </p>
+
+
+</div>
+
+<div class="footer">
+  <p>Copyright Kayan Clarke</p>
+</div>
+
+</body>
+</html>
