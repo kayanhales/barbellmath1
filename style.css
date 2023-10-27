@@ -71,4 +71,5 @@
   #result, #result2{
     font-size: larger;
     font-weight: bold;
+    white-space:pre-wrap;
   }

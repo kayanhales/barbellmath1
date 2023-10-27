@@ -14,7 +14,7 @@ console.log(targetWeight, barbellWeight, remainingWeight);
 
 function getPlates(weight){ 
     if (weight == 0){
-        result = "You need no (more) plates. ";
+        result = "\nYou need no (more) plates. ";
         console.log(result);
         document.querySelector('#result').textContent += result;
         return weight;
@@ -22,7 +22,7 @@ function getPlates(weight){
     else if (weight > 0){ 
         for (let i=0; i<plates.length; i++){
             if ((plates[i]*2) <= weight){
-                result = "You need two "+plates[i]+" lbs plates. ";
+                result = "\nYou need two "+plates[i]+" lbs plates. ";
                 console.log(result);
                 document.querySelector('#result').textContent += result;
                 getPlates(weight-(plates[i]*2));
@@ -57,7 +57,7 @@ function getPlatesMain(){
     target = document.getElementById("target").value;
     barbell = document.getElementById("barbell").value;
     getPlates(target-barbell);
-    document.querySelector('#result').textContent += " | Percentages: "+getPercentages(target);
-    document.querySelector('#result').textContent += " | Kgs: "+convertToKgs(target);
+    document.querySelector('#result').textContent += "\n\nPercentages: "+getPercentages(target);
+    document.querySelector('#result').textContent += "\n\nKgs: "+convertToKgs(target)+"\n";
     return false;
   }
